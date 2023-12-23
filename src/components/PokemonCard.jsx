@@ -3,9 +3,9 @@ import { Card } from "antd";
 import { Meta } from "antd/es/list/Item";
 import "./PokemonList.css";
 
-const PokemonCard = () => {
+const PokemonCard = (props) => {
   return <Card
-    title="Ditto"
+    title={props.name}
     cover={<img src="" alt="Ditto" />}
     extra={<StarOutlined />}
   >
