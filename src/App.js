@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { Col } from "antd";
 import { Searcher } from "./components/Searcher";
@@ -8,9 +8,7 @@ import logo from "./assets/logo.svg";
 import "./App.css";
 import { setPokemons as setPokemonsActions } from "./actions";
 
-function App() {
-  const [pokemons, setPokemons] = useState([]);
-
+function App({ pokemons, setPokemons }) {
   useEffect(() => {
     const fetchPokemons = async () => {
       const response = await getPokemons();

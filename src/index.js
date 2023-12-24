@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { pokemonsReducer } from './reducers/pokemons';
 import { Provider } from "react-redux";
-import { legacy_createStore as createStore } from "react-redux";
+import { legacy_createStore as createStore } from "redux";
 import './index.css';
 import App from './App';
 

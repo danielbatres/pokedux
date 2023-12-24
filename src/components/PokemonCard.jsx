@@ -6,7 +6,7 @@ import "./PokemonList.css";
 const PokemonCard = (props) => {
   return <Card
     title={props.name}
-    cover={<img src="" alt="Ditto" />}
+    cover={<img src="" alt={props.name} />}
     extra={<StarOutlined />}
   >
     <Meta description="fire, magic" />
