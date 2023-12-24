@@ -42,4 +42,4 @@ const mapDispatchToProps = dispatch => ({
   setPokemons: (value) => dispatch(setPokemonsActions(value))
 });
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
