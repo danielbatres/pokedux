@@ -3,10 +3,10 @@ import { Card } from "antd";
 import { Meta } from "antd/es/list/Item";
 import "./PokemonList.css";
 
-const PokemonCard = (props) => {
+const PokemonCard = ({ name, image }) => {
   return <Card
-    title={props.name}
-    cover={<img src="" alt={props.name} />}
+    title={name}
+    cover={<img src={image} alt={name} />}
     extra={<StarOutlined />}
   >
     <Meta description="fire, magic" />
