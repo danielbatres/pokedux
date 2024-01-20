@@ -1,9 +1,10 @@
+import { fromJS } from "immutable";
 import { SET_FAVORITE, SET_LOADING, SET_POKEMONS } from "../actions/types"
 
-const initialState = {
+const initialState = fromJS({
   pokemons: [],
   loading: false
-}
+});
 
 export const pokemonsReducer = (state = initialState, action) => {
   switch (action.type) {
