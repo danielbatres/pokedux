@@ -1,7 +1,7 @@
-import { StarOutlined } from "@ant-design/icons";
 import { Card } from "antd";
 import { Meta } from "antd/es/list/Item";
 import "./PokemonList.css";
+import { StarButton } from "./StarButton";
 
 const PokemonCard = ({ name, image, types }) => {
   const typesString = types.map(item => item.type.name).join(", ");
@@ -9,7 +9,7 @@ const PokemonCard = ({ name, image, types }) => {
   return <Card
     title={name}
     cover={<img src={image} alt={name} />}
-    extra={<StarOutlined />}
+    extra={<StarButton isFavorite onClick={() => alert("clicked")} />}
   >
     <Meta description={typesString} />
   </Card>
