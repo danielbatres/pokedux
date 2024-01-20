@@ -20,7 +20,7 @@ export const pokemonsReducer = (state = initialState, action) => {
 
       return state.setIn(["pokemons", currentPokemonIndex, "favorite"], !isFavorite);
     case SET_LOADING:
-      return { ...state, loading: action.payload };
+      return state.setIn(["loading"], action.payload);
     default: 
       return state;
   }

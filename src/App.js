@@ -4,13 +4,13 @@ import { Col, Spin } from "antd";
 import { Searcher } from "./components/Searcher";
 import { PokemonList } from "./components/PokemonList";
 import { getPokemons } from "./api";
-import { getPokemonsWithDetails, setLoading, setPokemons } from "./actions";
+import { getPokemonsWithDetails, setLoading } from "./actions";
 import logo from "./assets/logo.svg";
 import "./App.css";
 
 function App() {
-  const pokemons = useSelector(state => state.pokemons);
-  const loading = useSelector(state => state.loading);
+  const pokemons = useSelector(state => state.get("pokemons").toJS());
+  const loading = useSelector(state => state.get("loading"));
   const dispatch = useDispatch();
 
   useEffect(() => {
