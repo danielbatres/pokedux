@@ -35,7 +35,7 @@ export const dataSlice = createSlice({
       if (currentPokemonIndex >= 0) {
         const isFavorite = state.pokemons[currentPokemonIndex].favorte;
 
-        state.pokemons[currentPokemonIndex].favorte = !isFavorite;
+        state.pokemons[currentPokemonIndex].favorite = !isFavorite;
       }
     }
   }
