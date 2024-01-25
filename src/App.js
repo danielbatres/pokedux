@@ -8,11 +8,8 @@ import "./App.css";
 import { fetchPokemonsWithDetails } from "./slices/dataSlice";
 
 function App() {
-  const pokemons = useSelector(state => state.data.pokemons, shallowEqual
-    //.getIn(["data", "pokemons"]
-    );
-  // const loading = useSelector(state => state.ui.loading);
-  const loading = false;
+  const pokemons = useSelector(state => state.data.pokemons, shallowEqual);
+  const loading = useSelector(state => state.ui.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
